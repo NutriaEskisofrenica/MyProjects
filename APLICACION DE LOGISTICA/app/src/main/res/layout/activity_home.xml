@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF512C"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USER: Nombre"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <!-- Middle Content -->
+    <GridLayout
+        android:id="@+id/iconGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:padding="16dp"
+        android:rowCount="2">
+
+        <!-- Almacenes Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:onClick="openAlmacenes"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:src="@drawable/almacenes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALMACENES"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- Rastrea Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:onClick="openRastrea"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="115dp"
+                android:src="@drawable/rastrea" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RASTREA"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- Aprende Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:onClick="openAprende"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:src="@drawable/aprende" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="APRENDE"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- Comunicate Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:onClick="openComunicate"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:src="@drawable/comunicate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMUNICATE"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </GridLayout>
+
+    <!-- Additional Information Box -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="155dp"
+        android:layout_below="@id/iconGrid"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ultimos Movimientos..."
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-> Se registró la unidad #X de forma exitosa."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-> Se borró la unidad #Y de forma exitosa."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-> ..."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FF512C"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/home_option"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="30dp"
+            android:contentDescription="Home"
+            android:onClick="goHome"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/settings_option"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="30dp"
+            android:contentDescription="Settings"
+            android:onClick="openSettings"
+            android:src="@drawable/settings" />
+
+        <ImageView
+            android:id="@+id/scan_option"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:contentDescription="Scan"
+            android:onClick="openScan"
+            android:src="@drawable/scan" />
+
+        <ImageView
+            android:id="@+id/info_option"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="30dp"
+            android:contentDescription="Info"
+            android:onClick="openInfo"
+            android:src="@drawable/info" />
+
+        <ImageView
+            android:id="@+id/notification_option"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="30dp"
+            android:contentDescription="Notification"
+            android:onClick="openNotification"
+            android:src="@drawable/notificacion" />
+    </LinearLayout>
+
+</RelativeLayout>

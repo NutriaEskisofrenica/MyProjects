@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Orange bar with text "INFORMACION" -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FF512C"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/home_option"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="30dp"
+            android:contentDescription="Home"
+            android:onClick="goHome"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/settings_option"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="30dp"
+            android:contentDescription="Settings"
+            android:onClick="openSettings"
+            android:src="@drawable/settings" />
+
+        <ImageView
+            android:id="@+id/scan_option"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:contentDescription="Scan"
+            android:onClick="openScan"
+            android:src="@drawable/scan" />
+
+        <ImageView
+            android:id="@+id/info_option"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="30dp"
+            android:contentDescription="Info"
+            android:onClick="openInfo"
+            android:src="@drawable/info" />
+
+        <ImageView
+            android:id="@+id/notification_option"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="30dp"
+            android:contentDescription="Notification"
+            android:onClick="openNotification"
+            android:src="@drawable/notificacion" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF512C"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INFORMACION"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <!-- List of buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="¿Cómo registrar una unidad?" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Importancia del gestionamiento" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="¿Cómo manejar mi almacén?" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="¿Cómo rastrear una unidad?" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="¿Cómo contactar con mi equipo?" />
+    </LinearLayout>
+
+</RelativeLayout>
